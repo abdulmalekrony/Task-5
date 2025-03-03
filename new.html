@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-poppins bg-[rgb(226,232,240)]">
+    <header class="max-w-screen-2xl bg-white sm:mx-12 md:mx-28 mx-6 mt-3 rounded-2xl shadow-md">
+        <!-- Container -->
+        <div class="flex justify-between items-center px-5 py-3">
+            <div class="flex items-center">
+                <div class="w-8 h-8 mr-3">
+                    <img src="./asset/logo.png" alt="Logo" class="w-full" />
+                </div>
+                <h3 class="text-2xl">
+                    Dev<span class="font-bold">Board</span>
+                </h3>
+            </div>
+
+            <!-- Right Side -->
+            <button onclick="redirectToDesk()"
+                class="bg-blue-700 px-4 py-3 text-sm rounded-lg text-white hover:bg-blue-800">
+                Back to Desk
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-screen-2xl sm:mx-12 md:mx-28 mx-6 mt-3 mb-4">
+        <h3 class="text-2xl font-semibold text-center my-5">Blogs</h3>
+
+        <div class="bg-white rounded-xl mb-4">
+            <div class="border-b-2 border-slate-300 border-dashed p-5 font-semibold text-xl">
+                Question-1: What are the different ways to select an element
+                in the DOM?
+            </div>
+            <div class="p-5 text-lg text-gray-600">
+                
+                <p>
+                    In the Document Object Model (DOM), there are several ways to select elements to manipulate or retrieve information.
+                    One common method is using <strong>getElementById()</strong>, which selects a single element based on its unique <em>id</em> attribute.
+                    Another is <strong>getElementsByClassName()</strong>, which returns a live HTMLCollection of all elements sharing a specific class name.
+                    Similarly, <strong>getElementsByTagName()</strong> selects all elements with a given tag name, like "div" or "p".
+                    A more versatile method is <strong>querySelector()</strong>, which returns the first element matching a specified CSS selector,
+                    while <strong>querySelectorAll()</strong> returns a static NodeList of all elements that match the selector.
+                    These methods provide flexibility for targeting elements in various ways, whether through unique identifiers, class names, tags, or complex CSS selector patterns.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl mb-4">
+            <div class="border-b-2 border-slate-300 border-dashed p-5 font-semibold text-xl">
+                Question-2: What is the difference between innerHTML,
+                innerText, and textContent ?
+            </div>
+            <div class="p-5 text-lg text-gray-600">
+                <p>
+                    The properties <strong>innerHTML</strong>, <strong>innerText</strong>, and <strong>textContent</strong> are used to get or set content inside DOM elements, but they work differently. 
+                    <strong>innerHTML</strong> deals with HTML content, meaning it returns or sets the HTML markup, including tags and elements inside the selected element. 
+                    <strong>innerText</strong> focuses on the visible text content, considering CSS styles like <em>display: none</em> or hidden elements, and ignores any HTML tags within the element. 
+                    On the other hand, <strong>textContent</strong> retrieves all the text inside the element, regardless of the styling or visibility, but without including any HTML tags. 
+                    In summary, <strong>innerHTML</strong> handles HTML structure, <strong>innerText</strong> deals with visible text, and <strong>textContent</strong> captures all textual content without HTML formatting.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl mb-4">
+            <div class="border-b-2 border-slate-300 border-dashed p-5 font-semibold text-xl">
+                Question-3: What is event delegation in the DOM?
+            </div>
+            <p>
+                <strong>Event delegation</strong> is a technique in the DOM where a single event listener is added to a parent element 
+                instead of attaching individual listeners to each child element. When an event occurs on one of the child elements, 
+                the event bubbles up to the parent, allowing the parent to handle the event. This is useful when dealing with dynamic elements 
+                that are added to the page after it has loaded, as you do not need to attach separate listeners to each new element. 
+                Event delegation improves performance, reduces memory usage, and simplifies code, making it easier to manage events 
+                on multiple child elements through a common ancestor.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-xl mb-4">
+            <div class="border-b-2 border-slate-300 border-dashed p-5 font-semibold text-xl">
+                Question-4: What is event bubbling in the DOM?
+            </div>
+            <div class="p-5 text-lg text-gray-600">
+                <p>
+                    <strong>Event bubbling</strong> is a behavior in the DOM where an event starts from the deepest target element and then 
+                    bubbles up through its ancestor elements in the hierarchy. For example, if a user clicks on a button inside a div, 
+                    the click event first triggers on the button and then moves up to the parent div, continuing all the way up to the 
+                    document body. This allows multiple elements to listen for the same event as it moves upward through the DOM tree. 
+                    Event bubbling is useful for handling events at higher-level elements without needing to attach individual listeners 
+                    to each child. However, if needed, bubbling can be stopped using the <strong>stopPropagation()</strong> method.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl mb-4">
+            <div class="border-b-2 border-slate-300 border-dashed p-5 font-semibold text-xl">
+                Question-5: How do you create, add, and remove elements
+                using JavaScript?
+            </div>
+            <div class="p-5 text-lg text-gray-600">
+                <p>
+                    In JavaScript, you can dynamically create, add, and remove elements in the DOM. 
+                    To <strong>create</strong> an element, you use the <strong>document.createElement()</strong> method, specifying the tag name 
+                    of the element you want to create. After creating the element, you can add text or attributes to it as needed. 
+                    To <strong>add</strong> the new element to the page, you use methods like <strong>appendChild()</strong> or <strong>append()</strong> 
+                    to insert it into a parent element. To <strong>remove</strong> an element, you can call the <strong>removeChild()</strong> method 
+                    on the parent, or directly use the <strong>remove()</strong> method on the element itself. These methods are commonly used 
+                    for building dynamic web pages where content needs to change without reloading the page.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function redirectToDesk() {
+            window.location.href = "./index.html";
+        }
+    </script>
+</body>
+
+</html>
